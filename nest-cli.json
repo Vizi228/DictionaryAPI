@@ -1,0 +1,48 @@
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/dictionary/src",
+  "monorepo": true,
+  "root": "apps/dictionary",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/dictionary/tsconfig.app.json"
+  },
+  "projects": {
+    "auth": {
+      "type": "application",
+      "root": "apps/auth",
+      "entryFile": "main",
+      "sourceRoot": "apps/auth/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/auth/tsconfig.app.json"
+      }
+    },
+    "common": {
+      "type": "library",
+      "root": "libs/common",
+      "entryFile": "index",
+      "sourceRoot": "libs/common/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/common/tsconfig.lib.json"
+      }
+    },
+    "dictionary": {
+      "type": "application",
+      "root": "apps/dictionary",
+      "entryFile": "main",
+      "sourceRoot": "apps/dictionary/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/dictionary/tsconfig.app.json"
+      }
+    },
+    "translator": {
+      "type": "application",
+      "root": "apps/translator",
+      "entryFile": "main",
+      "sourceRoot": "apps/translator/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/translator/tsconfig.app.json"
+      }
+    }
+  }
+}
